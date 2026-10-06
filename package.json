@@ -1,0 +1,13 @@
+{
+  "name":"osnit-apex-web",
+  "private":true,
+  "version":"39.0.0",
+  "scripts":{
+    "dev":"wrangler pages dev . --d1 DB=osnit-apex",
+    "deploy":"wrangler pages deploy . --project-name osnit-apex-web",
+    "db:migrate:local":"wrangler d1 migrations apply osnit-apex --local",
+    "db:migrate:remote":"wrangler d1 migrations apply osnit-apex --remote",
+    "check":"node --check app.js && node --check 'functions/api/[[path]].js'"
+  },
+  "devDependencies":{"wrangler":"^4.0.0"}
+}
