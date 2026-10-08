@@ -109,4 +109,4 @@ export async function onRequest(context){
     }
     return json({error:'API endpoint bulunamadı'},404);
   }catch(e){return json({error:'Sunucu hatası',detail:String(e?.message||e)},500)}
-}
+}// OSNIT APEX Pages Function
